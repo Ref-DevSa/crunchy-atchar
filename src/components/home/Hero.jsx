@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-green-50">
+    <section className="relative overflow-hidden bg-linear-to-br from-orange-50 via-white to-green-50">
       {/* Background Decoration */}
       <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"></div>
       <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-200/30 blur-3xl"></div>
