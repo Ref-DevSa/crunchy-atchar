@@ -17,7 +17,7 @@ function Navbar() {
     <header className="sticky top-0 bg-white shadow">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <NavLink to="/">
-          <img src={logo} alt="Crunchy Atchar" className="h-16" />
+          <img src={logo} alt="Crunchy Atchar Logo" className="h-16 w-auto" />
         </NavLink>
 
         <ul className="hidden gap-8 md:flex">
