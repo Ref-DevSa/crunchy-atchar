@@ -6,7 +6,7 @@ function FeaturedProducts() {
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
 
-        <h2 className="mb-4 text-center text-4xl font-bold">
+        <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900">
           Featured Products
         </h2>
 

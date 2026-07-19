@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import Button from "../common/Button";
 
 function Hero() {
   return (
@@ -21,19 +21,8 @@ function Hero() {
           </p>
 
           <div className="flex gap-4">
-            <NavLink
-              to="/products"
-              className="rounded-lg bg-green-700 px-8 py-4 font-semibold text-white hover:bg-green-800"
-            >
-              Shop Now
-            </NavLink>
-
-            <NavLink
-              to="/about"
-              className="rounded-lg border-2 border-green-700 px-8 py-4 font-semibold text-green-700 hover:bg-green-700 hover:text-white"
-            >
-              Learn More
-            </NavLink>
+            <Button to="/products">Shop Now</Button>
+            <Button to="/about">Learn More</Button>
           </div>
         </div>
 

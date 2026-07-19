@@ -28,7 +28,7 @@ function Testimonials() {
             Customer Reviews
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold">
+          <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-gray-900">
             What Our Customers Say
           </h2>
 

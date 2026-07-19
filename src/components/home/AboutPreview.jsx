@@ -17,7 +17,7 @@ function AboutPreview() {
             About Us
           </p>
 
-          <h2 className="mb-6 text-4xl font-bold">
+          <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900">
             Homemade Goodness Since Day One
           </h2>
 

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import Button from "../common/Button";
 
 function CallToAction() {
   return (
@@ -13,12 +13,7 @@ function CallToAction() {
           homemade flavour delivered with care.
         </p>
 
-        <NavLink
-          to="/products"
-          className="rounded-lg bg-white px-8 py-4 font-semibold text-green-700 transition hover:bg-orange-100"
-        >
-          Browse Products
-        </NavLink>
+        <Button to="/products">Browse Products</Button>
       </div>
     </section>
   );

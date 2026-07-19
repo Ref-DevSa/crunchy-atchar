@@ -82,7 +82,7 @@ function About() {
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-6 text-center">
 
-          <h2 className="mb-12 text-4xl font-bold">
+          <h2 className="mb-12 text-4xl font-extrabold tracking-tight text-gray-900">
             Our Values
           </h2>
 

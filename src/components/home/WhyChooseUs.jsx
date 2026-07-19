@@ -30,7 +30,7 @@ function WhyChooseUs() {
             Why Choose Us
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold">
+          <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-gray-900">
             More Than Just Atchar
           </h2>
 
