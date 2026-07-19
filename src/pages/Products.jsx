@@ -23,7 +23,7 @@ function Products() {
 
   return (
     <>
-      <section className="bg-gradient-to-r from-green-700 to-orange-500 py-20 text-white">
+      <section className="bg-linear-to-r from-green-700 to-orange-500 py-20 text-white">
         <div className="mx-auto max-w-7xl px-6">
 
           <h1 className="text-5xl font-extrabold">

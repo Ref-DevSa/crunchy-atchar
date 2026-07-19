@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function About() {
   return (
     <>
-      <section className="bg-gradient-to-r from-green-700 to-orange-500 py-20 text-center text-white">
+      <section className="bg-linear-to-r from-green-700 to-orange-500 py-20 text-center text-white">
         <h1 className="text-5xl font-extrabold">
           About Crunchy Atchar
         </h1>
