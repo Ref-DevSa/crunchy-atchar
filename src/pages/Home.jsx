@@ -3,6 +3,7 @@ import FeaturedProducts from "../components/home/FeaturedProducts";
 import AboutPreview from "../components/home/AboutPreview";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Testimonials from "../components/home/Testimonials";
+import CallToAction from "../components/home/CallToAction";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <AboutPreview />
       <WhyChooseUs />
       <Testimonials />
+      <CallToAction />
     </>
   );
 }
