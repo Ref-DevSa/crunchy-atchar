@@ -8,17 +8,27 @@ function ProductCard({ product }) {
       />
 
       <div className="p-5">
-        <h3 className="mb-2 text-xl font-bold">
+
+        <span className="rounded bg-orange-100 px-3 py-1 text-sm text-orange-700">
+          {product.category}
+        </span>
+
+        <h3 className="mt-4 text-2xl font-bold">
           {product.name}
         </h3>
 
-        <p className="mb-4 text-lg font-semibold text-green-700">
+        <p className="mt-2 text-gray-600">
+          {product.description}
+        </p>
+
+        <p className="mt-4 text-xl font-bold text-green-700">
           {product.price}
         </p>
 
-        <button className="w-full rounded-lg bg-green-700 py-3 font-semibold text-white hover:bg-green-800">
+        <button className="mt-5 w-full rounded-lg bg-green-700 py-3 text-white hover:bg-green-800">
           View Product
         </button>
+
       </div>
     </div>
   );
