@@ -1,39 +1,96 @@
-import Button from "../common/Button";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="bg-orange-50">
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-20 md:flex-row">
-        {/* Left */}
-        <div className="md:w-1/2">
-          <p className="mb-3 font-semibold uppercase tracking-widest text-green-700">
-            Homemade • Fresh • Authentic
-          </p>
+    <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-green-50">
+      {/* Background Decoration */}
+      <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-orange-200/30 blur-3xl"></div>
+      <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-green-200/30 blur-3xl"></div>
 
-          <h1 className="mb-6 text-5xl font-bold leading-tight text-gray-900 md:text-6xl">
-            Taste the Crunch of Tradition
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+
+        {/* Left */}
+        <div>
+
+          <span className="inline-block rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
+            Proudly South African 🇿🇦
+          </span>
+
+          <h1 className="mt-6 text-5xl font-extrabold leading-tight text-gray-900 lg:text-6xl">
+            Homemade Atchar
+            <br />
+            Full of Crunch.
+            <br />
+            Full of Flavour.
           </h1>
 
-          <p className="mb-8 text-lg text-gray-600">
-            Crunchy Atchar brings you authentic homemade atchar crafted with
-            fresh ingredients, bold flavours, and traditional recipes that make
-            every meal unforgettable.
+          <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+            Discover authentic homemade atchar made using carefully selected
+            ingredients, traditional recipes and bold South African flavour.
+            Every jar is packed with freshness and quality.
           </p>
 
-          <div className="flex gap-4">
-            <Button to="/products">Shop Now</Button>
-            <Button to="/about">Learn More</Button>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <NavLink
+              to="/products"
+              className="rounded-lg bg-green-700 px-8 py-4 font-semibold text-white transition hover:bg-green-800"
+            >
+              Shop Now
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className="rounded-lg border-2 border-green-700 px-8 py-4 font-semibold text-green-700 transition hover:bg-green-700 hover:text-white"
+            >
+              Our Story
+            </NavLink>
           </div>
+
+          {/* Stats */}
+          <div className="mt-12 grid grid-cols-3 gap-6">
+
+            <div>
+              <h3 className="text-3xl font-bold text-green-700">
+                100%
+              </h3>
+              <p className="text-sm text-gray-600">
+                Homemade
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-orange-500">
+                Fresh
+              </h3>
+              <p className="text-sm text-gray-600">
+                Ingredients
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-green-700">
+                SA
+              </h3>
+              <p className="text-sm text-gray-600">
+                Proudly Local
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
         {/* Right */}
-        <div className="mt-12 flex justify-center md:mt-0 md:w-1/2">
+        <div className="flex justify-center">
+
           <img
-            src="https://images.unsplash.com/photo-1547592180-85f173990554?w=700"
-            alt="Crunchy Atchar"
-            className="rounded-3xl shadow-2xl"
+            src="/products/combo-pack.png"
+            alt="Crunchy Atchar Combo Pack"
+            className="w-full max-w-lg rounded-3xl shadow-2xl transition duration-500 hover:scale-105"
           />
+
         </div>
+
       </div>
     </section>
   );
