@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo/crunchy-atchar-logo.png";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const links = [
     { name: "Home", path: "/" },
@@ -14,21 +14,29 @@ function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 bg-white shadow">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        {/* Logo */}
         <NavLink to="/">
-          <img src={logo} alt="Crunchy Atchar Logo" className="h-16 w-auto" />
+          <img
+            src={logo}
+            alt="Crunchy Atchar"
+            className="h-16 w-auto"
+          />
         </NavLink>
 
-        <ul className="hidden gap-8 md:flex">
+        {/* Desktop Navigation */}
+        <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <li key={link.name}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  isActive
-                    ? "font-semibold text-green-700"
-                    : "text-gray-700 hover:text-green-700"
+                  `font-semibold transition ${
+                    isActive
+                      ? "text-green-700 border-b-2 border-orange-500 pb-1"
+                      : "text-gray-700 hover:text-orange-500"
+                  }`
                 }
               >
                 {link.name}
@@ -37,43 +45,50 @@ function Navbar() {
           ))}
         </ul>
 
+        {/* Desktop CTA */}
         <NavLink
           to="/products"
-          className="hidden rounded bg-green-700 px-5 py-3 text-white md:block"
+          className="hidden rounded-lg bg-orange-500 px-5 py-3 font-semibold text-white transition hover:bg-orange-600 md:block"
         >
-          Shop Now
+          Order Now
         </NavLink>
 
+        {/* Mobile Button */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setIsOpen(!isOpen)}
           className="text-3xl md:hidden"
         >
           ☰
         </button>
       </nav>
 
-      {menuOpen && (
-        <div className="border-t md:hidden">
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="border-t bg-white md:hidden">
           {links.map((link) => (
             <NavLink
               key={link.name}
               to={link.path}
-              onClick={() => setMenuOpen(false)}
-              className="block px-6 py-4"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `block px-6 py-4 ${
+                  isActive
+                    ? "bg-green-700 text-white"
+                    : "hover:bg-orange-100"
+                }`
+              }
             >
               {link.name}
             </NavLink>
           ))}
 
-          <div className="p-6">
-            <NavLink
-              to="/products"
-              onClick={() => setMenuOpen(false)}
-              className="block rounded bg-green-700 py-3 text-center text-white"
-            >
-              Shop Now
-            </NavLink>
-          </div>
+          <NavLink
+            to="/products"
+            onClick={() => setIsOpen(false)}
+            className="m-4 block rounded-lg bg-orange-500 py-3 text-center font-semibold text-white"
+          >
+            Order Now
+          </NavLink>
         </div>
       )}
     </header>
