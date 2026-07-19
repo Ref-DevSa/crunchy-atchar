@@ -2,44 +2,43 @@ import { NavLink } from "react-router-dom";
 
 function AboutPreview() {
   return (
-    <section className="bg-orange-50 py-20">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 md:flex-row">
-        <div className="md:w-1/2">
-          <img
-            src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=700"
-            alt="Crunchy Atchar"
-            className="rounded-2xl shadow-xl"
-          />
-        </div>
+    <section className="bg-orange-50 py-24">
 
-        <div className="md:w-1/2">
-          <p className="mb-2 font-semibold uppercase tracking-widest text-green-700">
-            About Us
+      <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
+
+        <img
+          src="/products/mild-mango.png"
+          alt="Crunchy Atchar"
+          className="rounded-3xl shadow-2xl"
+        />
+
+        <div>
+
+          <p className="font-semibold uppercase tracking-widest text-orange-500">
+            About Crunchy Atchar
           </p>
 
-          <h2 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900">
-            Homemade Goodness Since Day One
+          <h2 className="mt-3 text-5xl font-extrabold">
+            Authentic Homemade Flavour
           </h2>
 
-          <p className="mb-4 text-gray-600">
-            Crunchy Atchar is passionate about producing delicious homemade
-            atchar using carefully selected ingredients and traditional family
-            recipes.
-          </p>
-
-          <p className="mb-8 text-gray-600">
-            Every jar is packed with flavour, freshness, and the authentic
-            taste South Africans know and love.
+          <p className="mt-8 text-lg leading-8 text-gray-600">
+            We proudly produce premium homemade atchar using carefully selected
+            ingredients and trusted family recipes. Every jar is made with care,
+            ensuring freshness and bold South African flavour.
           </p>
 
           <NavLink
             to="/about"
-            className="rounded-lg bg-green-700 px-8 py-4 font-semibold text-white hover:bg-green-800"
+            className="mt-10 inline-block rounded-lg bg-green-700 px-8 py-4 font-semibold text-white hover:bg-green-800"
           >
-            Read More
+            Learn More
           </NavLink>
+
         </div>
+
       </div>
+
     </section>
   );
 }
