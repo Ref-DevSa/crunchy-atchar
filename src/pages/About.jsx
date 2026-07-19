@@ -1,116 +1,122 @@
+import { NavLink } from "react-router-dom";
+
 function About() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-green-700 py-16 text-center text-white">
-        <h1 className="text-5xl font-bold">About Crunchy Atchar</h1>
+      <section className="bg-gradient-to-r from-green-700 to-orange-500 py-20 text-center text-white">
+        <h1 className="text-5xl font-extrabold">
+          About Crunchy Atchar
+        </h1>
 
-        <p className="mt-4 text-lg">
-          Homemade flavour. Fresh ingredients. Proudly South African.
+        <p className="mt-5 text-lg">
+          Authentic homemade flavour with every jar.
         </p>
       </section>
 
-      {/* Our Story */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl gap-16 px-6 py-20 lg:grid-cols-2">
 
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=800"
-              alt="Our Story"
-              className="rounded-xl shadow-lg"
-            />
-          </div>
+        <img
+          src="/products/combo-pack.png"
+          alt="Crunchy Atchar"
+          className="rounded-3xl shadow-xl"
+        />
 
-          <div>
-            <h2 className="mb-6 text-4xl font-bold">
-              Our Story
-            </h2>
+        <div>
 
-            <p className="mb-4 text-gray-600">
-              Crunchy Atchar was founded with one goal: to produce authentic,
-              homemade atchar using quality ingredients and traditional South
-              African recipes.
-            </p>
-
-            <p className="mb-4 text-gray-600">
-              Every jar is prepared with care to ensure freshness, flavour and
-              consistency for every customer.
-            </p>
-
-            <p className="text-gray-600">
-              We believe great food brings people together, and our products are
-              made to be enjoyed at every table.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="bg-orange-50 py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
-
-          <div className="rounded-xl bg-white p-8 shadow">
-            <h3 className="mb-4 text-3xl font-bold text-green-700">
-              Our Mission
-            </h3>
-
-            <p className="text-gray-600">
-              To provide fresh, delicious homemade atchar that customers can
-              trust while supporting local communities and quality food
-              production.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-white p-8 shadow">
-            <h3 className="mb-4 text-3xl font-bold text-green-700">
-              Our Vision
-            </h3>
-
-            <p className="text-gray-600">
-              To become one of South Africa's most trusted homemade atchar
-              brands by delivering exceptional quality and customer
-              satisfaction.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-
-          <h2 className="mb-12 text-4xl font-extrabold tracking-tight text-gray-900">
-            Our Values
+          <h2 className="text-4xl font-bold">
+            Our Story
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-4">
+          <p className="mt-6 leading-8 text-gray-600">
+            Crunchy Atchar was founded with one goal:
+            bringing authentic homemade atchar to families
+            across South Africa using quality ingredients,
+            traditional recipes and exceptional customer service.
+          </p>
 
-            <div className="rounded-xl bg-white p-8 shadow">
-              <h3 className="mb-4 text-2xl">🥭</h3>
-              <h4 className="font-bold">Quality</h4>
-            </div>
+        </div>
 
-            <div className="rounded-xl bg-white p-8 shadow">
-              <h3 className="mb-4 text-2xl">❤️</h3>
-              <h4 className="font-bold">Passion</h4>
-            </div>
+      </section>
 
-            <div className="rounded-xl bg-white p-8 shadow">
-              <h3 className="mb-4 text-2xl">🤝</h3>
-              <h4 className="font-bold">Integrity</h4>
-            </div>
+      <section className="bg-orange-50 py-20">
 
-            <div className="rounded-xl bg-white p-8 shadow">
-              <h3 className="mb-4 text-2xl">🌍</h3>
-              <h4 className="font-bold">Community</h4>
-            </div>
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-3">
 
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <h3 className="mb-3 text-2xl font-bold">
+              Mission
+            </h3>
+
+            <p>
+              Deliver authentic homemade flavour with every jar.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <h3 className="mb-3 text-2xl font-bold">
+              Vision
+            </h3>
+
+            <p>
+              Become South Africa's favourite homemade atchar brand.
+            </p>
+          </div>
+
+          <div className="rounded-2xl bg-white p-8 shadow-lg">
+            <h3 className="mb-3 text-2xl font-bold">
+              Values
+            </h3>
+
+            <p>
+              Quality • Freshness • Passion • Community
+            </p>
           </div>
 
         </div>
+
+      </section>
+
+      <section className="py-20">
+
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-8 text-center md:grid-cols-4">
+
+          <div>
+            <h2 className="text-5xl font-bold text-green-700">100%</h2>
+            <p>Homemade</p>
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-bold text-green-700">Fresh</h2>
+            <p>Ingredients</p>
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-bold text-green-700">Local</h2>
+            <p>South African</p>
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-bold text-green-700">Quality</h2>
+            <p>Guaranteed</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="bg-green-700 py-20 text-center text-white">
+
+        <h2 className="text-4xl font-bold">
+          Ready to Taste the Difference?
+        </h2>
+
+        <NavLink
+          to="/products"
+          className="mt-8 inline-block rounded-xl bg-orange-500 px-8 py-4 font-bold"
+        >
+          Shop Products
+        </NavLink>
+
       </section>
     </>
   );
